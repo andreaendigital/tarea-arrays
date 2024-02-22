@@ -1,4 +1,4 @@
-document.write("<p>Estadisticas centro medico ñuñoa</p>");
+document.write("<h1>Estadisticas centro medico ñuñoa</h1>");
 
 // var radiologia = [
 //     {
@@ -316,11 +316,11 @@ traumatologia.push(   //agrega estos objetos(elementos) al arreglo de traumatolo
 radiologia.shift();  //Elimina el primer elemento del arreglo de radiología
 radiologia.pop(); // Elimina el último elemento del arreglo de radiología
 
-console.log(radiologia); // muestra los datos
+console.log(radiologia); // muestra los datos en consola
 
 //lista de consultas médicas de Dental, separadas por guión
 
-document.write("<p> Consultas médicas dentales: </p>");
+document.write("<h2> Consultas médicas dentales: </h2>");
 
 dental.forEach(function (consultadental) {
     document.write(consultadental.hora + " - " + consultadental.especialista + " - " + consultadental.paciente + " - " + consultadental.rut + " - " + consultadental.prevision + "</p>");
@@ -332,7 +332,7 @@ dental.forEach(function (consultadental) {
 
 let todosPacientes = radiologia.concat(traumatologia, dental);
 
-document.write("<p> Listado de todos los pacientes del centro médico: </p>");
+document.write("<h2> Listado de todos los pacientes del centro médico: </h2>");
 todosPacientes.forEach(paciente => {
     document.write("<p>" + paciente.paciente + "</p>");
 
@@ -340,7 +340,7 @@ todosPacientes.forEach(paciente => {
 
 // filtrar pacientes con ISAPRE en DENTAL
 
-document.write("<p> Pacientes Dentales con Isapre </p>");
+document.write("<h2> Pacientes Dentales con Isapre </h2>");
 
 let dentalPacientesIsapre = dental.filter(function (dentalPaciente) {
     return dentalPaciente.prevision === "ISAPRE";
@@ -354,7 +354,7 @@ dentalPacientesIsapre.forEach(dentalPaciente => {
 
 // filtrar pacientes con FONASA en TRAUMATOLOGIA
 
-document.write("<p> Pacientes de Traumatología con Fonasa </p>");
+document.write("<h2> Pacientes de Traumatología con Fonasa </h2>");
 
 let traumatologiaPacientesFonasa = traumatologia.filter(function (traumatologiaPaciente) {
     return traumatologiaPaciente.prevision === "FONASA";
@@ -367,28 +367,30 @@ traumatologiaPacientesFonasa.forEach(traumatologiaPaciente => {
 
 
 
-//Agregar código para el desafio 2 aquí
+//FIN código para el desafio 
+
+
 
 document.write(
-    `<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`
+    `<p><strong>Cantidad de atenciones para Radiología:</strong> ${radiologia.length}</p>`
 );
 document.write(
-    `<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`
+    `<p><strong>Cantidad de atenciones para Traumatología: </strong>${traumatologia.length}</p>`
 );
-document.write(`<p>Cantidad de atenciones para Dental: ${dental.length}</p>`);
+document.write(`<p><strong>Cantidad de atenciones para Dental:</strong> ${dental.length}</p>`);
 
 document.write(
-    `<p>Primera atencion: ${radiologia[0].paciente} - ${radiologia[0].prevision
-    } | Última atención: ${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision
+    `<p><strong>Primera atencion:</strong> ${radiologia[0].paciente} - ${radiologia[0].prevision
+    } |<strong> Última atención: </strong>${radiologia[radiologia.length - 1].paciente} - ${radiologia[radiologia.length - 1].prevision
     }.</p>`
 );
 document.write(
-    `<p>Primera atencion: ${traumatologia[0].paciente} - ${traumatologia[0].prevision
-    } | Última atención: ${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision
+    `<p><strong>Primera atencion:</strong> ${traumatologia[0].paciente} - ${traumatologia[0].prevision
+    } | <strong>Última atención: </strong>${traumatologia[traumatologia.length - 1].paciente} - ${traumatologia[traumatologia.length - 1].prevision
     }.</p>`
 );
 document.write(
-    `<p>Primera atencion: ${dental[0].paciente} - ${dental[0].prevision
-    } | Última atención: ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision
+    `<p><strong>Primera atencion:</strong> ${dental[0].paciente} - ${dental[0].prevision
+    } | <strong>Última atención:</strong> ${dental[dental.length - 1].paciente} - ${dental[dental.length - 1].prevision
     }.</p>`
 );
