@@ -342,17 +342,27 @@ todosPacientes.forEach(paciente => {
 
 document.write("<p> Pacientes Dentales con Isapre </p>");
 
-let dentalPacientesIsapre = dental.filter(function (dentalpaciente) { return dentalpaciente == "ISAPRE" });
+let dentalPacientesIsapre = dental.filter(function (dentalPaciente) {
+    return dentalPaciente.prevision === "ISAPRE";
+});
 
-document.write("<p>" + dentalIsapre + "</p>");
-dentalPacientesIsapre.forEach(dentalpaciente => {
-    document.write("<p>" + `${dentalpaciente.paciente} - ${dentalpaciente.prevision}` + "</p>");
+dentalPacientesIsapre.forEach(dentalPaciente => {
+    document.write("<p>" + `${dentalPaciente.paciente} - ${dentalPaciente.prevision}` + "</p>");
 });
 
 
 
 // filtrar pacientes con FONASA en TRAUMATOLOGIA
 
+document.write("<p> Pacientes de Traumatología con Fonasa </p>");
+
+let traumatologiaPacientesFonasa = traumatologia.filter(function (traumatologiaPaciente) {
+    return traumatologiaPaciente.prevision === "FONASA";
+});
+
+traumatologiaPacientesFonasa.forEach(traumatologiaPaciente => {
+    document.write("<p>" + `${traumatologiaPaciente.paciente} - ${traumatologiaPaciente.prevision}` + "</p>");
+});
 
 
 
